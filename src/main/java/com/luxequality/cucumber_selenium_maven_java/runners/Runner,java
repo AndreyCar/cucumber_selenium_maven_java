@@ -1,0 +1,20 @@
+package com.luxequality.cucumber_selenium_maven_java.runners;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+    dryRun = true,
+    features = "src/main/resources/features/",
+    glue = "steps",
+    plugin = {
+        "pretty",
+        "html:target/cucumber.html",
+        "rerun:target/failed.txt"
+    }
+)
+
+public class Runner {
+}
