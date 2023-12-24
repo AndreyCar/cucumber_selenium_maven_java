@@ -29,7 +29,7 @@ public class CommonMethods extends PageInitializer {
 
         // set up chrome options
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless=new");
+        // chromeOptions.addArguments("--headless=new");
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--window-size=1920,1080");
 

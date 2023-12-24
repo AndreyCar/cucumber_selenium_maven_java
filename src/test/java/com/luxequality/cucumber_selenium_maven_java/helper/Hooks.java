@@ -1,7 +1,7 @@
 package com.luxequality.cucumber_selenium_maven_java.helper;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import org.junit.After;
+import org.junit.Before;
 
 public class Hooks extends CommonMethods {
 
