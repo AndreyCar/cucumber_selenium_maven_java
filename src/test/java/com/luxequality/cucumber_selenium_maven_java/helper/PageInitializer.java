@@ -1,7 +1,6 @@
 package com.luxequality.cucumber_selenium_maven_java.helper;
 
-import com.luxequality.cucumber_selenium_maven_java.pages.LoginPage;
-import com.luxequality.cucumber_selenium_maven_java.pages.InventoryPage;
+import com.luxequality.cucumber_selenium_maven_java.pages.*;
 
 public class PageInitializer {
     public static LoginPage loginPage;
@@ -10,7 +9,7 @@ public class PageInitializer {
     /**
      * Initialize pages
      */
-    public void initializer() {
+    public static void initializePages() {
         loginPage = new LoginPage();
         inventoryPage = new InventoryPage();
 

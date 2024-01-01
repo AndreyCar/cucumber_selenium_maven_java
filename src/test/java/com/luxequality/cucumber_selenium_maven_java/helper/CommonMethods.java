@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CommonMethods extends PageInitializer {
@@ -19,7 +20,7 @@ public class CommonMethods extends PageInitializer {
     public static Logger logger = Logger.getLogger(CommonMethods.class.getName());
     public static Properties properties = new Properties();
 
-    public void exe() {
+    public void exe(Scenario scenario) {
         // load a properties file
         try {
             properties.load(CommonMethods.class.getClassLoader().getResourceAsStream("config.properties"));
@@ -45,7 +46,7 @@ public class CommonMethods extends PageInitializer {
                 .implicitlyWait(Duration.ofSeconds(Integer.parseInt(properties.getProperty("timeout.implicitly"))));
 
         // initialize page instances
-        initializer();
+        initializePages();
     }
 
     /**
